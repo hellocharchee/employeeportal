@@ -116,11 +116,11 @@
       // 1. Initialize Local State (Replaces Firebase)
       useEffect(() => {
         try {
-          // Check for saved login
-          const savedAccess = localStorage.getItem('charchee_unlocked');
-          if (savedAccess === 'true') {
-            setIsUnlocked(true);
-          }
+          // Disabled auto-unlock for development so you can test the lock screen
+          // const savedAccess = localStorage.getItem('charchee_unlocked');
+          // if (savedAccess === 'true') {
+          //   setIsUnlocked(true);
+          // }
           
           // Load saved tactical data
           const savedData = localStorage.getItem('charchee_data');
@@ -204,7 +204,7 @@
             setTimeout(() => {
               setIsUnlocked(true);
               setIsUnlocking(false);
-              localStorage.setItem('charchee_unlocked', 'true');
+              // localStorage.setItem('charchee_unlocked', 'true'); // Disabled for testing
               setPasswordInput('');
             }, 1800); 
           } else {
