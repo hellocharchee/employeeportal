@@ -44,7 +44,7 @@
     import * as LucideIcons from 'https://esm.sh/lucide-react@0.292.0';
     const { 
       Lock, Unlock, Mail, Target, Save, FileText, ChevronRight, Activity, Globe, Send, 
-      Home, Building, Utensils, Key, Map, Printer, MapPin, UserPlus, Trash2, User, 
+      Home, Building, Utensils, Map, Printer, MapPin, UserPlus, Trash2, User, 
       AtSign, ChevronDown, ChevronUp, Maximize2, X, QrCode, Download, Upload
     } = LucideIcons;
 
@@ -90,8 +90,7 @@
     const CATEGORIES = [
       { id: 'airbnb', name: 'Airbnb (STR)', icon: Home },
       { id: 'hotels', name: 'Hotels', icon: Building },
-      { id: 'fnb', name: 'Food & Beverage', icon: Utensils },
-      { id: 'realestate', name: 'Real Estate', icon: Key }
+      { id: 'fnb', name: 'Food & Beverage', icon: Utensils }
     ];
 
     function App() {
@@ -893,7 +892,6 @@
                   <th className="p-2 font-bold text-center w-1/12">Airbnb</th>
                   <th className="p-2 font-bold text-center w-1/12">Hotels</th>
                   <th className="p-2 font-bold text-center w-1/12">F&B</th>
-                  <th className="p-2 font-bold text-center w-1/12">Real Est.</th>
                   <th className="p-2 font-bold text-center w-1/12">Contacts</th>
                   <th className="p-2 font-bold w-1/3">Tactical Notes</th>
                 </tr>
@@ -913,7 +911,6 @@
                       <td className="p-2 text-center">{data.airbnb_sent || 0} / {data.airbnb_goal || 0}</td>
                       <td className="p-2 text-center">{data.hotels_sent || 0} / {data.hotels_goal || 0}</td>
                       <td className="p-2 text-center">{data.fnb_sent || 0} / {data.fnb_goal || 0}</td>
-                      <td className="p-2 text-center">{data.realestate_sent || 0} / {data.realestate_goal || 0}</td>
                       <td className="p-2 text-center font-bold text-blue-600">{contactCount}</td>
                       <td className="p-2 text-xs text-gray-700 whitespace-pre-wrap">{data.notes || '-'}</td>
                     </tr>
